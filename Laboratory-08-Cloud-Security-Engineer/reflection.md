@@ -1,0 +1,11 @@
+# Reflection
+
+A host-based firewall provides an additional layer of protection to a server, even when the network's external security has been compromised. Since security rules are enforced directly on the machine, UFW continues to inspect incoming connections regardless of whether an attacker has bypassed the router or network firewall. Any connection that does not match an allowed rule is automatically blocked.
+
+Controlling open network ports is essential for minimizing a server's attack surface because each accessible port can become a possible point of entry. Services running on exposed ports may contain security weaknesses that attackers could exploit. By allowing only the ports required for normal server operations, unnecessary access points are removed, helping strengthen the system's overall security.
+
+Exposing a database port such as 3306 to the public internet creates serious security risks. It allows external users to attempt direct connections to the database without going through the application's security controls. Since databases commonly store important and confidential information, leaving them publicly accessible increases the risk of unauthorized access, brute-force attacks, and exploitation of known vulnerabilities.
+
+Completing this mission helped me better understand how vulnerable a server can be once it becomes accessible online. Before working with UFW, I had not fully realized that even a newly deployed server can face security threats immediately. I also learned how important the order of firewall configuration is, since enabling UFW without first permitting SSH access could prevent administrators from connecting to their own server. Similarly, incorrect firewall rules could expose services that should remain protected.
+
+With this activity completed, my GitHub portfolio now contains eight finished missions, with each one introducing skills that build upon the previous activities. Starting from basic Linux commands in Mission 1 and progressing through infrastructure as code, system monitoring, and security hardening, the projects demonstrate a gradual development of practical cloud engineering knowledge. Together, these missions represent a learning journey rather than simply a collection of separate laboratory exercises.
